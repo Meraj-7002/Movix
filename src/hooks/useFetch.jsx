@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchDataFromApi } from "../utils/api";
 
-const useFetch = (url, sessionTimeout = 30) => {
+const useFetch = (url, sessionTimeout = 180) => {
     const isDataExpired = (cachedData) => {
         const { timestamp, data } = cachedData;
         const now = Date.now();
